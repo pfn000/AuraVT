@@ -10,7 +10,7 @@ Built By `© 2026 NCOM Systems. All rights reserved.`
 |---|---|
 | <img src="https://cdn.freebiesupply.com/logos/large/2x/unity-69-logo-png-transparent.png" alt="Unity" width="100"> | Unity SDK |
 | <img src="https://logos-world.net/wp-content/uploads/2021/04/VRChat-Emblem.png" alt="VRChat" width="100"> | VRChat Avatars |
-| [VCC](https://github.com/vrchat-community/creator-companion.git) | VRChat Creator Companion Unity Systems |
+| [VCC](https://github.com/pfn000/AuraVT/blob/main/.github/Images/Screenshot_2026-03-30_145902-removebg-preview.png) | VRChat Creator Companion Unity Systems |
 | <img src="http://googleusercontent.com/image_collection/image_retrieval/4977126573617564420_0" alt="AuraToon" width="100"> | AuraToon Shader |
 | <img src="https://github.com/pfn000/AuraVT/blob/main/.github/Images/Screenshot%202026-03-30%20145526.png" alt="lilToon" width="100"> | lilToon Shader |
 | <img src="https://github.com/poiyomi.png" alt="Poiyomi" width="100"> | Poiyomi Shader |
