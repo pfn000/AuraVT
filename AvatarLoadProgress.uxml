@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"
+         xmlns:uie="UnityEditor.UIElements">
+
+  <!--
+    AuraVT — Avatar Load Progress Overlay
+    Transparent floating overlay shown during avatar load.
+    Styles are defined in AvatarLoadProgress.uss
+  -->
+
+  <ui:VisualElement name="load-overlay" class="load-overlay">
+
+    <!-- Status text -->
+    <ui:Label name="status-label" text="Loading avatar…" class="status-label" />
+
+    <!-- Progress bar track -->
+    <ui:VisualElement name="progress-bar" class="progress-bar">
+      <!-- Fill (width set via code: style.width = Length.Percent(value * 100)) -->
+      <ui:VisualElement name="progress-fill" class="progress-fill" />
+    </ui:VisualElement>
+
+    <!-- Sub-label for file name -->
+    <ui:Label name="file-label" text="" class="file-label" />
+
+  </ui:VisualElement>
+
+</ui:UXML>
