@@ -8,6 +8,6 @@ Built By `© 2026 NCOM Systems. All rights reserved.`
 # Tools & Sources
 | Tools | Sources |
 |---|---|
-| ![Unity](https://cdn.freebiesupply.com/logos/large/2x/unity-69-logo-png-transparent.png) | Unity SDK |
-| ![VRChat](https://logos-world.net/wp-content/uploads/2021/04/VRChat-Emblem.png) | VRChat Avatars |
+| <img src="https://cdn.freebiesupply.com/logos/large/2x/unity-69-logo-png-transparent.png" alt="Unity" width="100"> | Unity SDK |
+| <img src="https://logos-world.net/wp-content/uploads/2021/04/VRChat-Emblem.png" alt="VRChat" width="100"> | VRChat Avatars |
 | [VCC](https://github.com/vrchat-community/creator-companion.git) | VRChat Creator Companion Unity Systems |
