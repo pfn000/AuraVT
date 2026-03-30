@@ -2,8 +2,11 @@
 
 **A next-generation open-source VTuber desktop overlay application.**  
 Built to be dramatically faster, lighter, and more compatible than VSeeFace.
-[Under Construction](https://pngimg.com/d/under_construction_PNG3.png)
+
 ---
+
+[Under Construction](https://pngimg.com/d/under_construction_PNG3.png)
+
 
 ## ✨ Features
 
