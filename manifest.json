@@ -1,0 +1,32 @@
+{
+    "dependencies": {
+        "com.unity.render-pipelines.universal": "14.0.11",
+        "com.unity.inputsystem": "1.8.1",
+        "com.unity.addressables": "1.21.21",
+        "com.unity.mathematics": "1.3.2",
+        "com.unity.collections": "2.4.4",
+        "com.unity.burst": "1.8.18",
+        "com.vrmc.univrm": "0.127.0",
+        "com.vrmc.vrm": "0.127.0",
+        "com.vrmc.gltf": "0.127.0",
+        "com.atteneder.gltfast": "6.7.1",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+    },
+    "scopedRegistries": [
+        {
+            "name": "VRM Consortium",
+            "url": "https://packages.vrmc.jp",
+            "scopes": [
+                "com.vrmc"
+            ]
+        },
+        {
+            "name": "OpenUPM",
+            "url": "https://package.openupm.com",
+            "scopes": [
+                "com.atteneder.gltfast",
+                "com.openupm"
+            ]
+        }
+    ]
+}
