@@ -3,8 +3,6 @@
 **A next-generation open-source VTuber desktop overlay application.**  
 Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 
----
-
 <div align="center">
 
 <img src="https://github.com/pfn000/AuraVT/blob/main/.github/Images/pngimg.com%20-%20under_construction_PNG3.png" alt="Under Construction" width="800">
