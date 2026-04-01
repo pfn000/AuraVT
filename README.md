@@ -27,7 +27,9 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 
 ---
 ## Dev Notes 🚧 
-> [!NOTE] these are developer notes to myself and for anyone with a naked eye looks at this
+> [!NOTE] 
+> these are developer notes to myself and for anyone with a naked eye looks at this
+
 - this shouldn't have to be loaded into unity. 
 - this should have unity crashhandler 
 - We'll hope to use AdvancedInstaller for windows
