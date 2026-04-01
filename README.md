@@ -20,7 +20,7 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 | VRChat avatar importer (Poiyomi, lilToon) | ✅ Phase 3 |
 | VRChat Avatar Importer (.unitypackage stripper + VRC component shim) |✅ Phase 4 |
 | Face tracking (MediaPipe / OpenSeeFace) | ✅ Phase 5 |
-| NATIVE FaceTracking - no not April fools 🃏 | Phase 5B |
+| NATIVE FaceTracking - no not April fools 🃏 | ✅ Phase 5B |
 | DirectX 11/12 native plugin (Windows) | 🔜 Phase 6 |
 | Vulkan native plugin (Linux) | 🔜 Phase 6 |
 | --- Possible future updates --- | 💪😏 |
