@@ -26,6 +26,13 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 | --- Possible future updates --- | 💪😏 |
 
 ---
+## Dev Notes 🚧 
+- this shouldn't have to be loaded into unity. 
+- this should have unity crashhandler 
+- We'll hope to use AdvancedInstaller for windows
+- Windows Development is Active
+- Linux Development is Active
+- MacOS Development is on hold 🥺. | MacOS System is not available to develop on | 
 
 ## 🚀 Getting Started
 
@@ -35,6 +42,7 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 - Git
 
 ### Setup
+> [!CAUTION] Ignore this set up. this method is stupid and won't work anyway. so just hang tight
 ```bash
 git clone https://github.com/pfn000/AuraVT.git
 cd AuraVT/UnityProject
@@ -42,6 +50,7 @@ cd AuraVT/UnityProject
 ```
 
 ### Build Native Plugin (Windows)
+> [!TIP] Don't sweat, I'm building a Windows Installer and for Linux I'll just build an AppImage file. 
 ```bash
 cd NativePlugins/Windows/TransparentWindow
 cmake -B build -DCMAKE_BUILD_TYPE=Release
