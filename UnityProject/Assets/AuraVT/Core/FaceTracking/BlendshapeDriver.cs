@@ -228,7 +228,60 @@ public class BlendshapeDriver : MonoBehaviour
         }
     }
 
-    // ── Tracking timeout ──────────────────────────────────────────────────────
+    // ── Built-in tracker injection ────────────────────────────────────────────
+
+    /// <summary>
+    /// Called by BuiltInFaceTracker each frame with converted face data.
+    /// Feeds directly into the same OSF processing path.
+    /// </summary>
+    public void InjectBuiltInFaceData(OpenSeeFaceReceiver.FaceData fd)
+    {
+        _trackingActive = true;
+        idleController?.SetActive(false);
+
+        float sens = config?.eyeSensitivity ?? 1f;
+        float blinkL = Mathf.Clamp01(1f - fd.EyeLeft  * sens);
+        float blinkR = Mathf.Clamp01(1f - fd.EyeRight * sens);
+        _targets["blinkLeft"]  = blinkL;
+        _targets["blinkRight"] = blinkR;
+        _targets["blink"]      = (blinkL + blinkR) * 0.5f;
+
+        float mSens = config?.mouthSensitivity ?? 1f;
+        _targets["aa"] = Mathf.Clamp01(fd.MouthOpen * mSens * 1.5f);
+        _targets["oh"] = Mathf.Clamp01(fd.MouthWide * mSens);
+
+        float smileVal = Mathf.Clamp01(
+            ((fd.MouthCornerUpL + fd.MouthCornerUpR) * 0.5f) * mSens);
+        _targets["happy"] = smileVal;
+
+        float browSens = config?.browSensitivity ?? 1f;
+        _targets["surprised"] = Mathf.Clamp01(
+            ((fd.BrowUpLeft + fd.BrowUpRight) * 0.5f) * browSens);
+
+        // Head rotation
+        if (_headBone != null)
+        {
+            float hSens = config?.headRotSensitivity ?? 1f;
+            var limits  = config != null
+                ? new Vector3(config.headPitchLimit, config.headYawLimit, config.headRollLimit)
+                : new Vector3(30, 45, 20);
+
+            var euler = new Vector3(
+                Mathf.Clamp(fd.HeadRotation.x * hSens, -limits.x, limits.x),
+                Mathf.Clamp(fd.HeadRotation.y * hSens, -limits.y, limits.y),
+                Mathf.Clamp(fd.HeadRotation.z * hSens, -limits.z, limits.z)
+            );
+            _headBone.localRotation = Quaternion.Slerp(
+                _headBone.localRotation,
+                _headBoneRestRot * Quaternion.Euler(euler),
+                Time.deltaTime * (config?.smoothingSpeed ?? 12f)
+            );
+        }
+
+        _lastBuiltInTime = Time.realtimeSinceStartup;
+    }
+
+    private float _lastBuiltInTime;
 
     private void CheckTrackingTimeout()
     {
