@@ -38,6 +38,8 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 - MacOS Development is on hold 🥺. | MacOS System is not available to develop on | 
 
 ## 🚀 Getting Started
+> [!CAUTION]
+> Ignore this set up. this method is stupid and won't work anyway. so just hang tight
 
 ### Requirements
 - Unity 2022.3 LTS (URP)
@@ -45,9 +47,6 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 - Git
 
 ### Setup
-> [!CAUTION]
-> Ignore this set up. this method is stupid and won't work anyway. so just hang tight
-
 ```bash
 git clone https://github.com/pfn000/AuraVT.git
 cd AuraVT/UnityProject
