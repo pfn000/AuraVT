@@ -17,7 +17,7 @@ Built to be dramatically faster, lighter, and more compatible than VSeeFace.
 | Transparent desktop overlay (Windows) | ✅ Phase 1 |
 | Drag & drop VRM / GLB avatar loading | ✅ Phase 2 |
 | VRChat avatar importer (Poiyomi, lilToon) | ✅ Phase 3 |
-| VRChat Avatar Importer (.unitypackage stripper + VRC component shim) | 🔜 Phase 4 |
+| VRChat Avatar Importer (.unitypackage stripper + VRC component shim) |✅ Phase 4 |
 | Face tracking (MediaPipe / OpenSeeFace) | 🔜 Phase 5 |
 | DirectX 11/12 native plugin (Windows) | 🔜 Phase 6 |
 | Vulkan native plugin (Linux) | 🔜 Phase 6 |
