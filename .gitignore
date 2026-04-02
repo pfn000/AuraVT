@@ -1,0 +1,26 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+*.translation
+
+# Imported textures, audio, and other resources
+.import/
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# Export folder
+export/
+
+# System/IDE
+.DS_Store
+.vscode/
+*.swp
+*.swo
+*~
+
+# User settings
+*.cfg.bak
