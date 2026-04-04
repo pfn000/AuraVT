@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: file:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">
+    <title>AuraVT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Drag Handle -->
+    <div id="drag-handle">
+        <span class="title">AuraVT</span>
+        <div id="window-controls">
+            <button id="btn-settings" title="Settings (ESC)">⚙️</button>
+            <button id="btn-minimize" title="Minimize">─</button>
+            <button id="btn-close" title="Close">✕</button>
+        </div>
+    </div>
+
+    <!-- Main 3D Canvas -->
+    <canvas id="avatar-canvas"></canvas>
+
+    <!-- Hidden video for webcam -->
+    <video id="webcam-video" autoplay playsinline style="display:none;"></video>
+
+    <!-- Drop Overlay -->
+    <div id="drop-overlay">
+        <div class="drop-content">
+            <div class="drop-icon">📁</div>
+            <p>Drop VRM/GLB file here</p>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Loading avatar...</p>
+    </div>
+
+    <!-- Status Message -->
+    <div id="status"></div>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel">
+        <div class="settings-header">
+            <h2>⚙️ Settings</h2>
+            <button id="settings-close">✕</button>
+        </div>
+
+        <div class="settings-content">
+            <div class="settings-section">
+                <h3>🎭 Avatar</h3>
+                <button id="btn-load-avatar" class="primary-btn">Load Avatar (VRM/GLB)</button>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-springbones"> Enable Spring Bones</label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>📹 Face Tracking</h3>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-facetracking"> Enable Face Tracking</label>
+                </div>
+                <div class="setting-row">
+                    <label>Smoothing</label>
+                    <input type="range" id="setting-face-smoothing" min="0" max="1" step="0.1" value="0.5">
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>✋ Hand Tracking</h3>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-handtracking"> Enable Hand Tracking</label>
+                </div>
+                <p class="hint">Uses MediaPipe for 21 landmark finger tracking</p>
+            </div>
+
+            <div class="settings-section">
+                <h3>🎤 Lip Sync</h3>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-lipsync" checked> Enable Audio Lip Sync</label>
+                </div>
+                <div class="setting-row">
+                    <label>Gain</label>
+                    <input type="range" id="setting-lipsync-gain" min="0.1" max="3" step="0.1" value="1.0">
+                </div>
+                <div class="setting-row">
+                    <label>Threshold</label>
+                    <input type="range" id="setting-lipsync-threshold" min="0" max="0.1" step="0.005" value="0.01">
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>🦴 VMC Protocol (Full Body)</h3>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-vmc"> Enable VMC Receiver</label>
+                </div>
+                <div class="setting-row">
+                    <label>Port</label>
+                    <input type="number" id="setting-vmc-port" value="39539" min="1024" max="65535">
+                </div>
+                <p class="hint">Receive full body tracking from SlimeVR, Rokoko, etc.</p>
+            </div>
+
+            <div class="settings-section">
+                <h3>🪟 Window</h3>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-alwaysontop" checked> Always on Top</label>
+                </div>
+                <div class="setting-row">
+                    <label><input type="checkbox" id="setting-clickthrough"> Click Through Mode</label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>ℹ️ About</h3>
+                <p class="about-text">
+                    <strong>AuraVT v1.0.0</strong><br>
+                    The FREE VTuber Desktop Overlay<br>
+                    © 2026 NCOM Systems<br>
+                    <a href="#" id="link-github">GitHub</a> | 
+                    <a href="#" id="link-devtools">DevTools</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
