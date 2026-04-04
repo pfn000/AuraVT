@@ -1,26 +1,76 @@
-# Godot 4+ specific ignores
-.godot/
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Godot-specific ignores
-*.translation
+# Build outputs
+dist/
+out/
+build/
+*.exe
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+*.snap
+*.msi
+*.msix
 
-# Imported textures, audio, and other resources
-.import/
+# Electron builder
+.electron-builder/
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
-
-# Export folder
-export/
-
-# System/IDE
+# OS files
 .DS_Store
-.vscode/
+Thumbs.db
+desktop.ini
 *.swp
-*.swo
 *~
 
-# User settings
-*.cfg.bak
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.code-workspace
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+token.json
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# User data (for development)
+userData/
+
+# Large binary files (use Git LFS instead)
+*.vrm
+*.glb
+*.gltf
+*.fbx
+*.blend

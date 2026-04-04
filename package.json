@@ -1,0 +1,118 @@
+{
+  "name": "auravt",
+  "version": "1.0.0",
+  "description": "The FREE open-source VTuber desktop overlay app. Face tracking, hand tracking, lip sync, full body mocap \u2014 all premium features, zero cost.",
+  "main": "src/main.js",
+  "author": {
+    "name": "NCOM Systems",
+    "email": "SaidieQN@ncomsystems.co",
+    "url": "https://github.com/pfn000"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfn000/AuraVT.git"
+  },
+  "keywords": [
+    "vtuber",
+    "vrm",
+    "face-tracking",
+    "hand-tracking",
+    "mediapipe",
+    "electron",
+    "three.js",
+    "desktop-overlay",
+    "lip-sync",
+    "vmc-protocol",
+    "mocap",
+    "avatar",
+    "streaming",
+    "obs"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --enable-logging",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "three": "^0.162.0",
+    "@pixiv/three-vrm": "^2.1.0",
+    "osc": "^2.4.4",
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.13.0"
+  },
+  "build": {
+    "appId": "com.ncomsystems.auravt",
+    "productName": "AuraVT",
+    "copyright": "Copyright \u00a9 2026 NCOM Systems",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/",
+        "to": "assets/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.entertainment"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "assets/icon.png",
+      "category": "AudioVideo"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AuraVT"
+    }
+  }
+}
